@@ -352,20 +352,20 @@ type GuildUpdate struct {
 	VerificationLevel           omit.Omit[*VerificationLevel]          `json:"verification_level,omitzero"`
 	DefaultMessageNotifications omit.Omit[*MessageNotificationsLevel]  `json:"default_message_notifications,omitzero"`
 	ExplicitContentFilter       omit.Omit[*ExplicitContentFilterLevel] `json:"explicit_content_filter,omitzero"`
-	AFKChannelID                *snowflake.ID                          `json:"afk_channel_id,omitempty"`
+	AFKChannelID                omit.Omit[*snowflake.ID]               `json:"afk_channel_id,omitzero"`
 	AFKTimeout                  *int                                   `json:"afk_timeout,omitempty"`
 	Icon                        omit.Omit[*Icon]                       `json:"icon,omitzero"`
 	Splash                      omit.Omit[*Icon]                       `json:"splash,omitzero"`
 	DiscoverySplash             omit.Omit[*Icon]                       `json:"discovery_splash,omitzero"`
 	Banner                      omit.Omit[*Icon]                       `json:"banner,omitzero"`
-	SystemChannelID             *snowflake.ID                          `json:"system_channel_id,omitempty"`
+	SystemChannelID             omit.Omit[*snowflake.ID]               `json:"system_channel_id,omitzero"`
 	SystemChannelFlags          *SystemChannelFlags                    `json:"system_channel_flags,omitempty"`
-	RulesChannelID              *snowflake.ID                          `json:"rules_channel_id,omitempty"`
-	PublicUpdatesChannelID      *snowflake.ID                          `json:"public_updates_channel_id,omitempty"`
-	SafetyAlertsChannelID       *snowflake.ID                          `json:"safety_alerts_channel_id,omitempty"`
-	PreferredLocale             *string                                `json:"preferred_locale,omitempty"`
+	RulesChannelID              omit.Omit[*snowflake.ID]               `json:"rules_channel_id,omitzero"`
+	PublicUpdatesChannelID      omit.Omit[*snowflake.ID]               `json:"public_updates_channel_id,omitzero"`
+	SafetyAlertsChannelID       omit.Omit[*snowflake.ID]               `json:"safety_alerts_channel_id,omitzero"`
+	PreferredLocale             omit.Omit[*string]                     `json:"preferred_locale,omitzero"`
 	Features                    *[]GuildFeature                        `json:"features,omitempty"`
-	Description                 *string                                `json:"description,omitempty"`
+	Description                 omit.Omit[*string]                     `json:"description,omitzero"`
 	PremiumProgressBarEnabled   *bool                                  `json:"premium_progress_bar_enabled,omitempty"`
 }
 
